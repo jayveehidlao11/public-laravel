@@ -1,0 +1,133 @@
+
+ .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+ /* Fading animation */
+ .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+   /* Next & previous buttons */
+   .prev,
+   .next {
+     cursor: pointer;
+     position: relative;
+     top: 50%;
+     width: auto;
+     padding: 16px;
+     margin-top: -22px;
+     color: white;
+     font-weight: bold;
+     font-size: 18px;
+     transition: 0.6s ease;
+     border-radius: 0 3px 3px 0;
+     user-select: none;
+   }
+ /* Position the "next button" to the right */
+ .next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(228, 212, 212, 0.8);
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+  to {
+    opacity: 1
+  }
+}
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #999999;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  .active,
+  .dot:hover {
+    background-color: #111111;
+  }
+/* Header/Blog Title */
+.header {
+  padding: 10px;
+  font-size: 40px;
+  text-align: center;
+  background: white;
+  margin-top: 2%;
+  margin-left: 18.5%;
+  width: 80%;
+}
+.display {
+  width:600px;
+  vertical-align: middle;
+  height:300px;
+}
+
+.card {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+.leftcolumn {   
+  margin-left: 18.5%;
+  padding: 30px;
+  width: 80%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 1250px) {
+  .leftcolumn {   
+    width: 100%;
+    padding: 0;
+    margin: auto;
+    float: left;
+  }
+  .img{
+    width:100%;
+    margin: auto;
+  }
+ 
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
+}
+@media screen and (max-width:1250px) {
+  .header{
+    width:100%;
+    margin: auto;
+  
+    font-size: 22px;
+   }
+}
